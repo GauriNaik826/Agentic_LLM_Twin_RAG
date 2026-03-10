@@ -1,6 +1,6 @@
 # Agentic LLM Twin RAG
 
-Production-style LLM system that builds a personal knowledge twin from web content, indexes it for retrieval, generates fine-tuning datasets, and supports training/evaluation/inference pipelines using ZenML.
+Agentic LLM Twin is an end-to-end LLM engineering system for building a personalized AI model from curated digital content. It covers the full ML lifecycle: data ingestion, feature engineering, fine-tuning, retrieval-augmented generation (RAG), evaluation, and deployment. Beyond a traditional LLM Twin, it adds an agentic retrieval layer that plans, decomposes, and executes multi-step information gathering before response generation. The result is a production-grade, personalized writing co-pilot built on modular pipelines and cloud-ready infrastructure.
 
 ---
 
