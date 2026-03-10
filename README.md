@@ -1,0 +1,1 @@
+This project builds upon concepts from the LLM Engineers Handbook and extends it with an agent-driven RAG inference system and production-oriented deployment improvements.

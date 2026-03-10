@@ -38,7 +38,7 @@ class SelfQuery(RAGStep):
 
 
 if __name__ == "__main__":
-    query = Query.from_str("I am Paul Iusztin. Write an article about the best types of advanced RAG methods.")
+    query = Query.from_str("I am Gauri Naik. Write an article about the best types of advanced RAG methods.")
     self_query = SelfQuery()
     query = self_query.generate(query)
     logger.info(f"Extracted author_id: {query.author_id}")
