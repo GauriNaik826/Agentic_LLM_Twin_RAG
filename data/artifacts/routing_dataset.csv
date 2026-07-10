@@ -1,0 +1,5 @@
+query,expected_route
+"Summarize my Medium article",rag
+"What happened today at OpenAI?",web
+"Rewrite this email in my style",twin_writer
+"Explain RAG",rag

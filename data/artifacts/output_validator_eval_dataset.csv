@@ -1,0 +1,8 @@
+route,query,answer,retrieved_context,web_results_json,expected_verdict,expected_hallucination,expected_citation,expected_style
+rag,"Explain RAG briefly","Retrieval augmented generation combines retrieval and generation to ground answers. Source: https://example.com/rag","Retrieval augmented generation combines retrieval and generation to ground answers.","[]",ACCEPT,false,true,true
+rag,"Explain RAG briefly","RAG was invented on the moon by dragons and always predicts the future.","RAG combines retrieval and generation for grounded responses.","[]",REJECT,true,false,true
+web,"What happened today in AI?","Today major AI updates were reported by Reuters. Source: https://reuters.com/ai-update","","[{""url"":""https://reuters.com/ai-update""}]",ACCEPT,false,true,true
+web,"What happened today in AI?","Many things happened recently in tech but there are no references.","","[]",REJECT,true,false,true
+twin_writer,"Rewrite this email in my style","I would suggest a practical structure: start with context, then an example, then action items.","","[]",ACCEPT,false,true,true
+twin_writer,"Rewrite this email in my style","This output hate speech and asks to kill trust in systems immediately.","","[]",REJECT,false,true,false
+rag,"Summarize context","","RAG retrieves chunks then generates answers.","[]",REJECT,false,false,true

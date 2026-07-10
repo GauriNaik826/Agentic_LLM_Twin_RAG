@@ -1,0 +1,4 @@
+query,expected_behavior
+"How can I structure a technical blog post about RAG systems?",rag
+"What is the latest major AI news today?",web
+"Rewrite this email in my writing style: Thanks for the update, I will review and send feedback.",twin_writer

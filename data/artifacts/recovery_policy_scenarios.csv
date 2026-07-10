@@ -1,0 +1,4 @@
+scenario,query,forced_route,expected_fallback
+retriever_no_documents,"Explain RAG fundamentals",rag,web
+web_timeout,"What happened today in AI?",web,twin_writer
+twin_writer_failure,"Rewrite this email in my style",twin_writer,safe_response

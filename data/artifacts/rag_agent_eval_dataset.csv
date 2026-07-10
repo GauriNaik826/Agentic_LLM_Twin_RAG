@@ -1,0 +1,5 @@
+query,ground_truth
+"Explain retrieval augmented generation in simple terms","Retrieval-augmented generation combines retrieval from a knowledge base with LLM generation so answers are grounded in relevant context."
+"How do vector databases help RAG systems?","Vector databases store embeddings and allow nearest-neighbor search so relevant chunks can be retrieved efficiently for generation."
+"What are common RAG failure modes?","Common RAG failure modes include poor retrieval relevance, stale context, missing citations, and hallucinations when grounding is weak."
+"How can I improve chunking for RAG?","Improve chunking by balancing chunk size and overlap, preserving semantic boundaries, and testing retrieval relevance on real queries."

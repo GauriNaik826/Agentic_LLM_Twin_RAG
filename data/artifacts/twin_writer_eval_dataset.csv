@@ -1,0 +1,4 @@
+prompt,reference_style
+"Rewrite this paragraph in my style: RAG combines retrieval and generation.","The author writes in a clear, practical, technical style with concise structure and concrete examples."
+"Draft a short LinkedIn post about vector databases and embeddings.","The author uses crisp language, actionable insights, and an engaging professional voice."
+"Explain why evaluation matters in LLM apps.","The author emphasizes engineering tradeoffs, measurable metrics, and direct guidance."
