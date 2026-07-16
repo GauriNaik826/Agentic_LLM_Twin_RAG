@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+
+:root {
+  --bg-1: #f2efe7;
+  --bg-2: #dbe7c9;
+  --card: #fffef8;
+  --ink: #162521;
+  --accent: #1f7a8c;
+  --accent-2: #88b04b;
+  --danger: #b23a48;
+  --muted: #4a5d54;
+  --border: #d3ddcc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 20% 20%, var(--bg-2), transparent 45%),
+    linear-gradient(140deg, var(--bg-1) 0%, #f7f3e9 55%, #e5eddc 100%);
+  min-height: 100vh;
+}
+
+.page-shell {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.panel {
+  width: min(960px, 100%);
+  background: color-mix(in srgb, var(--card) 90%, white 10%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(22, 37, 33, 0.12);
+  padding: 24px;
+  animation: rise 360ms ease-out;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  border-bottom: 1px dashed var(--border);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: 0.02em;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.chat-input {
+  display: grid;
+  gap: 10px;
+}
+
+.chat-input label {
+  font-weight: 600;
+}
+
+.chat-input textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  resize: vertical;
+  min-height: 108px;
+  padding: 12px;
+  font: inherit;
+  color: inherit;
+}
+
+.chat-input textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 35%, white 65%);
+  border-color: var(--accent);
+}
+
+.chat-input button {
+  justify-self: start;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, var(--accent), #2f95a6);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.chat-input button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.chat-input button:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid #b5d2d8;
+  border-top-color: var(--accent);
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-box {
+  margin-top: 18px;
+  border: 1px solid color-mix(in srgb, var(--danger) 45%, white 55%);
+  background: #fff1f3;
+  color: #76202d;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.response-card {
+  margin-top: 20px;
+  display: grid;
+  gap: 14px;
+}
+
+.block {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  background: #fff;
+}
+
+.block h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: #223a34;
+}
+
+.agent-badge {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #cae4c6;
+  background: #f4fbef;
+  font-weight: 600;
+}
+
+.answer-text {
+  margin: 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.sources-list,
+.validation-list,
+.checks-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.sources-list li,
+.validation-list li,
+.checks-list li {
+  margin: 6px 0;
+}
+
+.sources-list a {
+  color: var(--accent);
+}
+
+.validation-list,
+.checks-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.validation-list li,
+.checks-list li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #d7dfd0;
+  padding: 6px 0;
+}
+
+.metadata-route {
+  margin: 0 0 8px;
+  font-weight: 500;
+}
+
+.muted {
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 14px;
+  }
+
+  .panel {
+    padding: 16px;
+    border-radius: 12px;
+  }
+}

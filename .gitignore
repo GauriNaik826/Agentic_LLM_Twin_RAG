@@ -167,6 +167,10 @@ cython_debug/
 # VS Code
 .vscode/**/launch.json
 
+# Node / frontend
+node_modules/
+frontend/dist/
+
 # Data
 output/
 sagemaker_*.json

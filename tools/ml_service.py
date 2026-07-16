@@ -1,4 +1,4 @@
-from llm_engineering.infrastructure.inference_pipeline_api import app  # noqa
+from llm_engineering.infrastructure.inference_pipeline_api_pure_RAG import app  # noqa
 
 if __name__ == "__main__":
     import uvicorn

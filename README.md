@@ -271,9 +271,37 @@ Fallback examples:
 ├── pipelines/
 ├── steps/
 ├── tests/
+├── frontend/
 ├── tools/
 └── pyproject.toml
 ```
+
+## Dashboard UI (React)
+
+A React dashboard is available in `frontend/` to visualize the FastAPI supervisor response.
+
+Run backend:
+
+```bash
+python tools/ml_service.py
+```
+
+Run frontend:
+
+```bash
+cd frontend
+npm install
+cp .env.example .env
+npm run dev
+```
+
+The frontend expects the detailed endpoint `POST /rag/details` and renders:
+
+- Agent used
+- Answer
+- Sources
+- Validation (grounded, confidence, latency)
+- Metadata checks
 
 ---
 
